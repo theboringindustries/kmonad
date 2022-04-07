@@ -1,0 +1,182 @@
+(defcfg
+  input (iokit-name)
+  output (kext)
+  fallthrough true
+)
+
+#|
+(deflayer name
+     _      _      _      _      _      _      _      _      _      _      _      _      _ 
+     _      _      _      _      _      _      _      _      _      _      _      _      _      _
+     _      _      _      _      _      _      _      _      _      _      _      _      _      _
+     _      _      _      _      _      _      _      _      _      _      _      _      _
+     _      _      _      _      _      _      _      _      _      _      _      _      _
+     _      _      _      _                _                        _      _      _      _      _
+)
+(deflayer name
+     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX
+     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX
+     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX
+     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX
+     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX
+     XX     XX     XX     XX               XX                       XX     XX     XX     XX     XX
+)
+|#
+  
+(defsrc
+     esc    f1     f2     f3     f4     f5     f6     f7     f8     f9     f10    f11    f12
+     grv    1      2      3      4      5      6      7      8      9      0      -      =      bspc
+     tab    q      w      e      r      t      y      u      i      o      p      [      ]      \
+     caps   a      s      d      f      g      h      j      k      l      ;      '      ret
+     lsft   z      x      c      v      b      n      m      ,      .      /      rsft   up
+     fn     lctl   lalt   lmet             spc                      rmet   ralt   left   down   rght
+)
+  
+(defalias 
+  #| layers |#
+  cmd (layer-toggle command)
+  nav (layer-toggle navigation)
+  smb (sticky-key 500 (layer-toggle symbols))
+  sft (sticky-key 500 (layer-toggle shift))
+  rusft (layer-toggle russian-shift)
+  nmb (layer-switch numbers)
+  def (layer-switch default)
+  tnmb (sticky-key 500 (layer-toggle numbers))
+  cmdd (sticky-key 500 (around (layer-toggle src) lmet))
+  #| layers |#
+
+  #| met keys |#
+  pre (around lmet ,)
+  cmc (around lmet c)
+  cmv (around lmet v)
+  cma (around lmet a)
+  cmw (around lmet w)
+  cmr (around lmet r)
+  cmh (around lmet h)
+  cmj (around lmet j)
+  cmk (around lmet k)
+  cml (around lmet l)
+  #| met keys |#
+
+  #| hammerspoon |#
+  mus (around lmet (around lalt (around lctl m))) ;; open yandex music
+  spo (around lmet (around lalt (around lctl s))) ;; open spotify
+  ite (around lmet (around lalt (around lctl i))) ;; open iterm2
+  goo (around lmet (around lalt (around lctl c))) ;; open chrome
+  ton (around lmet (around lalt (around lctl t))) ;; open telegram
+  roc (around lmet (around lalt (around lctl r))) ;; open rocket.chat
+  vpn (around lmet (around lalt (around lctl v))) ;; toggle work vpn
+  r #((around lmet (around lctl (around z r))) (layer-switch russian)) ;; switch russian
+  e #((around lmet (around lctl (around z e))) (layer-switch default)) ;; switch english
+  vim (around lmet (around lalt (around lctl j))) ;; toggle vim mode
+  #| hammerspoon |#
+
+  #| apps shortcuts |#
+  lke (around lmet (around lalt (around lctl l))) ;; like current yandex music song
+  tnx (around lmet right) ;; next iterm2 tab
+  tbc (around lmet left) ;; prev iterm2 tab
+  pas (around lmet (around lsft v)) ;; toggle paste app
+  cons (around lalt (around lmet j)) ;; open chrome console
+  #| apps shortcuts |#
+
+  #| macos shortcuts |#
+  spot (around lctl space) ;; open spotlight
+  scr (around lmet (around lsft 4)) ;; make screenshot
+  fn (tap-next XX (around (layer-toggle function) fn)) ;; toggle f keys
+  cc (around lmet c)
+  cv (around lmet v)
+  #| macos shortcuts |#
+)
+
+
+(deflayer default
+     lctl   brdn   brup   lp     mctl   bldn   blup   prev   pp     next   mute   vold   volu
+     @cmdd  sft    XX     /      bspc   XX     XX     XX     ret    .      XX     XX     XX     @r
+     @nav   _      _      _      _      _      _      _      _      _      _      ;      [      (layer-switch numbers) 
+     @cmd   _      _      _      _      _      _      _      _      _      @tnmb  :      XX 
+     =      @goo   _      _      _      _      _      _      _      `      tab    XX     XX 
+     @fn    _      _      @sft             spc                      @smb   XX     XX     XX     XX 
+)
+
+(deflayer symbols
+     _      _      _      _      _      _      _      _      _      _      _      _      _ 
+     _      _      _      _      -      _      _      _      +      _      _      _      _      _
+     _      "      #      ^      !      _      _      &      $      |      *      \      _      _
+     _      <      [      \(     {      _      _      %      ?      ~      >      _      _
+     _      _      _      '      _      _      _      \_     _      _      _      _      _
+     _      _      _      @cmdd            @                        _      _      _      _      _
+)
+  
+
+(deflayer navigation
+     _      _      _      _      _      _      _      _      _      _      _      _      _ 
+     _      _      _      _      _      _      _      _      @tbc   @tnx   _      _      _      _
+     _      @spo   _      _      _      _      _      @roc   @ton   @goo   @mus   _      _      _
+     _      _      _      _      _      _      left   down   up     rght   @ite   _      _
+     _      _      _      _      _      _      _      _      _      _      _      _      _
+     _      _      _      lsft             _                        lmet   _      _      _      _
+)
+  
+(deflayer command
+     XX     XX     XX     XX     XX     XX     XX     XX     @vpn   XX     XX     XX     @lke   
+     XX     XX     XX     XX     XX     XX     XX     XX     @cons  XX     XX     XX     XX     XX 
+     XX     C-q    C-w    @vim   C-r    XX     XX     C-u    C-i    C-o    @pas   XX     XX     XX 
+     XX     @scr   C-s    C-d    C-f    XX     C-h    C-j    C-k    C-l    esc    XX     XX     
+     XX     XX     C-x    C-c    C-v    XX     C-n    XX     XX     XX     XX     XX     _
+     XX     XX     XX     @cmc             @spot                    @cmv   XX     XX     XX     XX 
+)
+  
+(deflayer numbers
+     XX     brdn   brup   lp     mctl   bldn   blup   prev   pp     next   mute   vold   volu   
+     XX     XX     XX     XX     bspc   XX     XX     XX     XX     XX     XX     XX     XX     XX 
+     XX     XX     XX     6      XX     XX     XX     XX     7      XX     XX     XX     XX     (layer-switch default)
+     XX     9      5      0      3      XX     2      1      4      8      @def   XX     XX
+     XX     XX     XX     XX     XX     XX     XX     XX     _      XX     XX     XX     XX
+     XX     XX     XX     XX               spc                      @smb   XX     XX     XX     XX
+)
+ 
+(deflayer shift
+     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX
+     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX
+     XX     Q      W      E      R      T      Y      U      I      O      P      \)     XX     XX
+     XX     A      S      D      F      G      H      J      K      L      }      ]      XX 
+     XX     Z      X      C      V      B      N      M      _      XX     XX     XX     XX
+     XX     XX     XX     XX               XX                       @cmdd  XX     XX     XX     XX  
+)
+  
+(deflayer function
+     _      f1     f2     f3     f4     f5     f6     f7     f8     f9     f10    f11    f12
+     _      _      _      _      _      _      _      _      _      _      _      _      _      _
+     _      _      _      _      _      _      _      _      _      _      _      _      _      _
+     _      _      _      _      _      _      _      _      _      _      _      _      _
+     _      _      _      _      _      _      _      _      _      _      _      _      _
+     _      _      _      _                _                        _      _      _      _      _
+)
+
+(deflayer src
+     esc    f1     f2     f3     f4     f5     f6     f7     f8     f9     f10    f11    f12
+     grv    1      2      3      4      5      6      7      8      9      0      -      =      bspc
+     tab    q      w      e      r      t      y      u      i      o      p      [      ]      \
+     caps   a      s      d      f      g      h      j      k      l      ;      '      ret
+     lsft   z      x      c      v      b      n      m      ,      .      /      rsft   up
+     fn     lctl   lalt   lmet             spc                      rmet   ralt   left   down   rght
+)
+
+(deflayer russian
+     lctl   brdn   brup   lp     mctl   bldn   blup   prev   pp     next   mute   vold   volu
+     lmet   sft    _      /      bspc   _      _      _      ret    .      _      _      _      @e
+     @nav   _      _      _      _      _      _      _      _      _      _      _      _      _
+     @cmd   _      _      _      _      _      _      _      _      _      _      _      XX 
+     XX     _      _      _      _      _      _      _      _      _      .      XX     XX 
+     @fn    _      _      @rusft           spc                      @smb   XX     XX     XX     XX 
+)
+
+(deflayer russian-shift
+     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX
+     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX     XX
+     XX     Q      W      E      R      T      Y      U      I      O      P      {      XX     XX
+     XX     A      S      D      F      G      H      J      K      L      :      "      XX 
+     XX     Z      X      C      V      B      N      M      _      XX     XX     XX     XX
+     XX     XX     XX     XX               XX                       @cmdd  XX     XX     XX     XX  
+)
+  

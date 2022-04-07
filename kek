@@ -1,0 +1,1184 @@
+Building all executables for `kmonad' once. After a successful build of all of them, only specified executables will be rebuilt.
+kmonad> build (lib + exe)
+Preprocessing library for kmonad-0.4.1..
+Building library for kmonad-0.4.1..
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/dext.cpp:1:0: error: 
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/keyio_mac.hpp:83:16: error:
+     warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+      char *fifo = "/Users/rocky/.kmonad_fifo";
+                   ^
+   |
+83 |   char *fifo = "/Users/rocky/.kmonad_fifo";
+   |                ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/keyio_mac.hpp:121:35: error:
+     error: use of undeclared identifier 'ptr'
+        while(fgets(buf, sizeof(buf), ptr)) {
+                                      ^
+    |
+121 |     while(fgets(buf, sizeof(buf), ptr)) {
+    |                                   ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/keyio_mac.hpp:162:12: error:
+     error: use of undeclared identifier 'ptr'
+        rewind(ptr);
+               ^
+    |
+162 |     rewind(ptr);
+    |            ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/keyio_mac.hpp:285:37: error:
+     warning: 'kIOMasterPortDefault' is deprecated: first deprecated in macOS 12.0 [-Wdeprecated-declarations]
+      kr = IOServiceGetMatchingServices(kIOMasterPortDefault,
+                                        ^~~~~~~~~~~~~~~~~~~~
+                                        kIOMainPortDefault
+    |
+285 |   kr = IOServiceGetMatchingServices(kIOMasterPortDefault,
+    |                                     ^
+
+/Users/rocky/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/IOKit.framework/Versions/A/Headers/IOKitLib.h:123:19: error:
+     note: 'kIOMasterPortDefault' has been explicitly marked deprecated here
+    |
+123 | const mach_port_t kIOMasterPortDefault
+    |                   ^
+const mach_port_t kIOMasterPortDefault
+                  ^
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/dext.cpp:1:0: error: 
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/keyio_mac.hpp:294:70: error:
+     warning: 'kIOMasterPortDefault' is deprecated: first deprecated in macOS 12.0 [-Wdeprecated-declarations]
+      IONotificationPortRef notification_port = IONotificationPortCreate(kIOMasterPortDefault);
+                                                                         ^~~~~~~~~~~~~~~~~~~~
+                                                                         kIOMainPortDefault
+    |
+294 |   IONotificationPortRef notification_port = IONotificationPortCreate(kIOMasterPortDefault);
+    |                                                                      ^
+
+/Users/rocky/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/IOKit.framework/Versions/A/Headers/IOKitLib.h:123:19: error:
+     note: 'kIOMasterPortDefault' has been explicitly marked deprecated here
+    |
+123 | const mach_port_t kIOMasterPortDefault
+    |                   ^
+const mach_port_t kIOMasterPortDefault
+                  ^
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/dext.cpp:4:0: error: 
+
+/Users/rocky/dev/fork/kmonad/In file included from /Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/include/pqrs/karabiner/driverkit/virtual_hid_device_service.hpp:7:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from /Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/include/pqrs/karabiner/driverkit/virtual_hid_device_service/client.hpp:12:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram.hpp:9:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram/client.hpp:9:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram/impl/client_impl.hpp:9:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram/impl/asio_helper.hpp:11:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/asio.hpp:19:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/asio/associated_executor.hpp:20:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/executor.hpp:42:18: error:
+     warning: 'result_of<asio::execution::detail::as_invocable<asio::execution::detail::void_receiver, asio::basic_system_executor<asio::execution::detail::blocking::possibly_t<0>, asio::execution::detail::relationship::fork_t<0>, std::allocator<void>>> &()>' is deprecated [-Wdeprecated-declarations]
+            typename result_of<typename decay<F>::type&()>::type
+                     ^
+   |
+42 |         typename result_of<typename decay<F>::type&()>::type
+   |                  ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/executor.hpp:61:3: error:
+     note: in instantiation of template class 'asio::execution::detail::is_executor_of_impl_base<asio::basic_system_executor<asio::execution::detail::blocking::possibly_t<0>, asio::execution::detail::relationship::fork_t<0>, std::allocator<void>>, asio::execution::detail::as_invocable<asio::execution::detail::void_receiver, asio::basic_system_executor<asio::execution::detail::blocking::possibly_t<0>, asio::execution::detail::relationship::fork_t<0>, std::allocator<void>>>>' requested here
+      conditional<
+      ^
+   |
+61 |   conditional<
+   |   ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/sender.hpp:114:20: error:
+     note: in instantiation of template class 'asio::execution::detail::is_executor_of_impl<asio::basic_system_executor<asio::execution::detail::blocking::possibly_t<0>, asio::execution::detail::relationship::fork_t<0>, std::allocator<void>>, asio::execution::detail::as_invocable<asio::execution::detail::void_receiver, asio::basic_system_executor<asio::execution::detail::blocking::possibly_t<0>, asio::execution::detail::relationship::fork_t<0>, std::allocator<void>>>>' requested here
+            && detail::is_executor_of_impl<S,
+                       ^
+    |
+114 |         && detail::is_executor_of_impl<S,
+    |                    ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/sender.hpp:148:5: error:
+     note: during template argument deduction for class template partial specialization 'sender_traits_base<S, typename enable_if<!has_sender_types<S>::value && detail::is_executor_of_impl<S, as_invocable<void_receiver, S>>::value>::type>' [with S = asio::basic_system_executor<asio::execution::detail::blocking::possibly_t<0>, asio::execution::detail::relationship::fork_t<0>, std::allocator<void>>]
+      : detail::sender_traits_base<S>
+        ^
+    |
+148 |   : detail::sender_traits_base<S>
+    |     ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/sender.hpp:148:5: error:
+     note: in instantiation of template class 'asio::execution::detail::sender_traits_base<asio::basic_system_executor<asio::execution::detail::blocking::possibly_t<0>, asio::execution::detail::relationship::fork_t<0>, std::allocator<void>>>' requested here
+    |
+148 |   : detail::sender_traits_base<S>
+    |     ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/sender.hpp:164:35: error:
+     note: in instantiation of template class 'asio::execution::sender_traits<asio::basic_system_executor<asio::execution::detail::blocking::possibly_t<0>, asio::execution::detail::relationship::fork_t<0>, std::allocator<void>>>' requested here
+            typename asio::execution::sender_traits<
+                                      ^
+    |
+164 |         typename asio::execution::sender_traits<
+    |                                   ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/sender.hpp:188:13: error:
+     note: (skipping 6 contexts in backtrace; use -ftemplate-backtrace-limit=0 to see all)
+        detail::has_sender_traits<typename remove_cvref<T>::type>::value,
+                ^
+    |
+188 |     detail::has_sender_traits<typename remove_cvref<T>::type>::value,
+    |             ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/executor.hpp:62:5: error:
+     note: in instantiation of template class 'asio::execution::can_execute<asio::basic_system_executor<asio::execution::detail::blocking::possibly_t<0>, asio::execution::detail::relationship::fork_t<0>, std::allocator<void>>, asio::execution::invocable_archetype>' requested here
+        can_execute<T, F>::value,
+        ^
+   |
+62 |     can_execute<T, F>::value,
+   |     ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/executor.hpp:113:3: error:
+     note: in instantiation of template class 'asio::execution::detail::is_executor_of_impl<asio::basic_system_executor<asio::execution::detail::blocking::possibly_t<0>, asio::execution::detail::relationship::fork_t<0>, std::allocator<void>>, asio::execution::invocable_archetype>' requested here
+      detail::is_executor_of_impl<T, invocable_archetype>
+      ^
+    |
+113 |   detail::is_executor_of_impl<T, invocable_archetype>
+    |   ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/impl/compose.hpp:70:21: error:
+     note: in instantiation of template class 'asio::execution::is_executor<asio::basic_system_executor<asio::execution::detail::blocking::possibly_t<0>, asio::execution::detail::relationship::fork_t<0>, std::allocator<void>>>' requested here
+            !execution::is_executor<Executor>::value
+                        ^
+   |
+70 |         !execution::is_executor<Executor>::value
+   |                     ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/impl/compose.hpp:208:42: error:
+     note: during template argument deduction for class template partial specialization 'composed_work_guard<Executor, typename enable_if<!execution::is_executor<Executor>::value>::type>' [with Executor = asio::basic_system_executor<asio::execution::detail::blocking::possibly_t<0>, asio::execution::detail::relationship::fork_t<0>, std::allocator<void>>]
+        composed_work_guard<system_executor> head_;
+                                             ^
+    |
+208 |     composed_work_guard<system_executor> head_;
+    |                                          ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/impl/compose.hpp:208:42: error:
+     note: in instantiation of template class 'asio::detail::composed_work_guard<asio::basic_system_executor<asio::execution::detail::blocking::possibly_t<0>, asio::execution::detail::relationship::fork_t<0>, std::allocator<void>>>' requested here
+    |
+208 |     composed_work_guard<system_executor> head_;
+    |                                          ^
+
+/Users/rocky/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/type_traits:4009:34: error:
+     note: 'result_of<asio::execution::detail::as_invocable<asio::execution::detail::void_receiver, asio::basic_system_executor<asio::execution::detail::blocking::possibly_t<0>, asio::execution::detail::relationship::fork_t<0>, std::allocator<void>>> &()>' has been explicitly marked deprecated here
+     |
+4009 | template <class _Callable> class _LIBCPP_DEPRECATED_IN_CXX17 result_of;
+     |                                  ^
+template <class _Callable> class _LIBCPP_DEPRECATED_IN_CXX17 result_of;
+                                 ^
+
+/Users/rocky/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__config:1066:39: error:
+     note: expanded from macro '_LIBCPP_DEPRECATED_IN_CXX17'
+     |
+1066 | #  define _LIBCPP_DEPRECATED_IN_CXX17 _LIBCPP_DEPRECATED
+     |                                       ^
+#  define _LIBCPP_DEPRECATED_IN_CXX17 _LIBCPP_DEPRECATED
+                                      ^
+
+/Users/rocky/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__config:1043:48: error:
+     note: expanded from macro '_LIBCPP_DEPRECATED'
+     |
+1043 | #    define _LIBCPP_DEPRECATED __attribute__ ((deprecated))
+     |                                                ^
+#    define _LIBCPP_DEPRECATED __attribute__ ((deprecated))
+                                               ^
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/dext.cpp:4:0: error: 
+
+/Users/rocky/dev/fork/kmonad/In file included from /Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/include/pqrs/karabiner/driverkit/virtual_hid_device_service.hpp:7:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from /Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/include/pqrs/karabiner/driverkit/virtual_hid_device_service/client.hpp:12:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram.hpp:9:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram/client.hpp:9:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram/impl/client_impl.hpp:9:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram/impl/asio_helper.hpp:11:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/asio.hpp:19:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/asio/associated_executor.hpp:20:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/executor.hpp:42:18: error:
+     warning: 'result_of<asio::execution::invocable_archetype &()>' is deprecated [-Wdeprecated-declarations]
+            typename result_of<typename decay<F>::type&()>::type
+                     ^
+   |
+42 |         typename result_of<typename decay<F>::type&()>::type
+   |                  ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/executor.hpp:61:3: error:
+     note: in instantiation of template class 'asio::execution::detail::is_executor_of_impl_base<asio::basic_system_executor<asio::execution::detail::blocking::possibly_t<0>, asio::execution::detail::relationship::fork_t<0>, std::allocator<void>>, asio::execution::invocable_archetype>' requested here
+      conditional<
+      ^
+   |
+61 |   conditional<
+   |   ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/executor.hpp:113:3: error:
+     note: in instantiation of template class 'asio::execution::detail::is_executor_of_impl<asio::basic_system_executor<asio::execution::detail::blocking::possibly_t<0>, asio::execution::detail::relationship::fork_t<0>, std::allocator<void>>, asio::execution::invocable_archetype>' requested here
+      detail::is_executor_of_impl<T, invocable_archetype>
+      ^
+    |
+113 |   detail::is_executor_of_impl<T, invocable_archetype>
+    |   ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/impl/compose.hpp:70:21: error:
+     note: in instantiation of template class 'asio::execution::is_executor<asio::basic_system_executor<asio::execution::detail::blocking::possibly_t<0>, asio::execution::detail::relationship::fork_t<0>, std::allocator<void>>>' requested here
+            !execution::is_executor<Executor>::value
+                        ^
+   |
+70 |         !execution::is_executor<Executor>::value
+   |                     ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/impl/compose.hpp:208:42: error:
+     note: during template argument deduction for class template partial specialization 'composed_work_guard<Executor, typename enable_if<!execution::is_executor<Executor>::value>::type>' [with Executor = asio::basic_system_executor<asio::execution::detail::blocking::possibly_t<0>, asio::execution::detail::relationship::fork_t<0>, std::allocator<void>>]
+        composed_work_guard<system_executor> head_;
+                                             ^
+    |
+208 |     composed_work_guard<system_executor> head_;
+    |                                          ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/impl/compose.hpp:208:42: error:
+     note: in instantiation of template class 'asio::detail::composed_work_guard<asio::basic_system_executor<asio::execution::detail::blocking::possibly_t<0>, asio::execution::detail::relationship::fork_t<0>, std::allocator<void>>>' requested here
+    |
+208 |     composed_work_guard<system_executor> head_;
+    |                                          ^
+
+/Users/rocky/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/type_traits:4009:34: error:
+     note: 'result_of<asio::execution::invocable_archetype &()>' has been explicitly marked deprecated here
+     |
+4009 | template <class _Callable> class _LIBCPP_DEPRECATED_IN_CXX17 result_of;
+     |                                  ^
+template <class _Callable> class _LIBCPP_DEPRECATED_IN_CXX17 result_of;
+                                 ^
+
+/Users/rocky/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__config:1066:39: error:
+     note: expanded from macro '_LIBCPP_DEPRECATED_IN_CXX17'
+     |
+1066 | #  define _LIBCPP_DEPRECATED_IN_CXX17 _LIBCPP_DEPRECATED
+     |                                       ^
+#  define _LIBCPP_DEPRECATED_IN_CXX17 _LIBCPP_DEPRECATED
+                                      ^
+
+/Users/rocky/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__config:1043:48: error:
+     note: expanded from macro '_LIBCPP_DEPRECATED'
+     |
+1043 | #    define _LIBCPP_DEPRECATED __attribute__ ((deprecated))
+     |                                                ^
+#    define _LIBCPP_DEPRECATED __attribute__ ((deprecated))
+                                               ^
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/dext.cpp:4:0: error: 
+
+/Users/rocky/dev/fork/kmonad/In file included from /Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/include/pqrs/karabiner/driverkit/virtual_hid_device_service.hpp:11:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/include/pqrs/karabiner/driverkit/virtual_hid_device_service/utility.hpp:15:46: error:
+     warning: 'kIOMasterPortDefault' is deprecated: first deprecated in macOS 12.0 [-Wdeprecated-declarations]
+      auto service = IOServiceGetMatchingService(kIOMasterPortDefault, IOServiceNameMatching("org_pqrs_Karabiner_DriverKit_VirtualHIDDeviceRoot"));
+                                                 ^~~~~~~~~~~~~~~~~~~~
+                                                 kIOMainPortDefault
+   |
+15 |   auto service = IOServiceGetMatchingService(kIOMasterPortDefault, IOServiceNameMatching("org_pqrs_Karabiner_DriverKit_VirtualHIDDeviceRoot"));
+   |                                              ^
+
+/Users/rocky/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/IOKit.framework/Versions/A/Headers/IOKitLib.h:123:19: error:
+     note: 'kIOMasterPortDefault' has been explicitly marked deprecated here
+    |
+123 | const mach_port_t kIOMasterPortDefault
+    |                   ^
+const mach_port_t kIOMasterPortDefault
+                  ^
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/dext.cpp:4:0: error: 
+
+/Users/rocky/dev/fork/kmonad/In file included from /Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/include/pqrs/karabiner/driverkit/virtual_hid_device_service.hpp:7:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from /Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/include/pqrs/karabiner/driverkit/virtual_hid_device_service/client.hpp:12:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram.hpp:9:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram/client.hpp:9:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram/impl/client_impl.hpp:9:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram/impl/asio_helper.hpp:11:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/asio.hpp:19:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/asio/associated_executor.hpp:20:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/executor.hpp:42:18: error:
+     warning: 'result_of<asio::execution::detail::as_invocable<asio::execution::detail::void_receiver, asio::io_context::basic_executor_type<std::allocator<void>, 0>> &()>' is deprecated [-Wdeprecated-declarations]
+            typename result_of<typename decay<F>::type&()>::type
+                     ^
+   |
+42 |         typename result_of<typename decay<F>::type&()>::type
+   |                  ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/executor.hpp:61:3: error:
+     note: in instantiation of template class 'asio::execution::detail::is_executor_of_impl_base<asio::io_context::basic_executor_type<std::allocator<void>, 0>, asio::execution::detail::as_invocable<asio::execution::detail::void_receiver, asio::io_context::basic_executor_type<std::allocator<void>, 0>>>' requested here
+      conditional<
+      ^
+   |
+61 |   conditional<
+   |   ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/sender.hpp:114:20: error:
+     note: in instantiation of template class 'asio::execution::detail::is_executor_of_impl<asio::io_context::basic_executor_type<std::allocator<void>, 0>, asio::execution::detail::as_invocable<asio::execution::detail::void_receiver, asio::io_context::basic_executor_type<std::allocator<void>, 0>>>' requested here
+            && detail::is_executor_of_impl<S,
+                       ^
+    |
+114 |         && detail::is_executor_of_impl<S,
+    |                    ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/sender.hpp:148:5: error:
+     note: during template argument deduction for class template partial specialization 'sender_traits_base<S, typename enable_if<!has_sender_types<S>::value && detail::is_executor_of_impl<S, as_invocable<void_receiver, S>>::value>::type>' [with S = asio::io_context::basic_executor_type<std::allocator<void>, 0>]
+      : detail::sender_traits_base<S>
+        ^
+    |
+148 |   : detail::sender_traits_base<S>
+    |     ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/sender.hpp:148:5: error:
+     note: in instantiation of template class 'asio::execution::detail::sender_traits_base<asio::io_context::basic_executor_type<std::allocator<void>, 0>>' requested here
+    |
+148 |   : detail::sender_traits_base<S>
+    |     ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/sender.hpp:164:35: error:
+     note: in instantiation of template class 'asio::execution::sender_traits<asio::io_context::basic_executor_type<std::allocator<void>, 0>>' requested here
+            typename asio::execution::sender_traits<
+                                      ^
+    |
+164 |         typename asio::execution::sender_traits<
+    |                                   ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/sender.hpp:188:13: error:
+     note: (skipping 8 contexts in backtrace; use -ftemplate-backtrace-limit=0 to see all)
+        detail::has_sender_traits<typename remove_cvref<T>::type>::value,
+                ^
+    |
+188 |     detail::has_sender_traits<typename remove_cvref<T>::type>::value,
+    |             ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/any_executor.hpp:477:5: error:
+     note: in instantiation of template class 'asio::execution::is_executor<asio::io_context::basic_executor_type<std::allocator<void>, 0>>' requested here
+        is_executor<T>::value,
+        ^
+    |
+477 |     is_executor<T>::value,
+    |     ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/any_executor.hpp:1353:12: error:
+     note: in instantiation of template class 'asio::execution::detail::is_valid_target_executor<asio::io_context::basic_executor_type<std::allocator<void>, 0>, void (asio::execution::context_as_t<asio::execution_context &>, asio::execution::detail::blocking::never_t<0>, asio::execution::prefer_only<asio::execution::detail::blocking::possibly_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::tracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::untracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::fork_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::continuation_t<0>>)>' requested here
+            >::type::value
+               ^
+     |
+1353 |         >::type::value
+     |            ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/detail/io_object_impl.hpp:60:7: error:
+     note: while substituting deduced template arguments into function template 'any_executor' [with Executor = asio::io_context::basic_executor_type<std::allocator<void>, 0>]
+          executor_(context.get_executor())
+          ^
+   |
+60 |       executor_(context.get_executor())
+   |       ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/basic_waitable_timer.hpp:236:7: error:
+     note: in instantiation of function template specialization 'asio::detail::io_object_impl<asio::detail::deadline_timer_service<asio::detail::chrono_time_traits<std::chrono::steady_clock, asio::wait_traits<std::chrono::steady_clock>>>, asio::execution::any_executor<asio::execution::context_as_t<asio::execution_context &>, asio::execution::detail::blocking::never_t<0>, asio::execution::prefer_only<asio::execution::detail::blocking::possibly_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::tracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::untracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::fork_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::continuation_t<0>>>>::io_object_impl<asio::io_context>' requested here
+        : impl_(context)
+          ^
+    |
+236 |     : impl_(context)
+    |       ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/pqrs-org__cpp-local_datagram/install/include/pqrs/local_datagram/impl/base_impl.hpp:46:86: error:
+     note: in instantiation of function template specialization 'asio::basic_waitable_timer<std::chrono::steady_clock>::basic_waitable_timer<asio::io_context>' requested here
+                                                                                         send_invoker_(io_service_, asio_helper::time_point::pos_infin()),
+                                                                                         ^
+   |
+46 |                                                                                      send_invoker_(io_service_, asio_helper::time_point::pos_infin()),
+   |                                                                                      ^
+
+/Users/rocky/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/type_traits:4009:34: error:
+     note: 'result_of<asio::execution::detail::as_invocable<asio::execution::detail::void_receiver, asio::io_context::basic_executor_type<std::allocator<void>, 0>> &()>' has been explicitly marked deprecated here
+     |
+4009 | template <class _Callable> class _LIBCPP_DEPRECATED_IN_CXX17 result_of;
+     |                                  ^
+template <class _Callable> class _LIBCPP_DEPRECATED_IN_CXX17 result_of;
+                                 ^
+
+/Users/rocky/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__config:1066:39: error:
+     note: expanded from macro '_LIBCPP_DEPRECATED_IN_CXX17'
+     |
+1066 | #  define _LIBCPP_DEPRECATED_IN_CXX17 _LIBCPP_DEPRECATED
+     |                                       ^
+#  define _LIBCPP_DEPRECATED_IN_CXX17 _LIBCPP_DEPRECATED
+                                      ^
+
+/Users/rocky/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__config:1043:48: error:
+     note: expanded from macro '_LIBCPP_DEPRECATED'
+     |
+1043 | #    define _LIBCPP_DEPRECATED __attribute__ ((deprecated))
+     |                                                ^
+#    define _LIBCPP_DEPRECATED __attribute__ ((deprecated))
+                                               ^
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/dext.cpp:4:0: error: 
+
+/Users/rocky/dev/fork/kmonad/In file included from /Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/include/pqrs/karabiner/driverkit/virtual_hid_device_service.hpp:7:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from /Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/include/pqrs/karabiner/driverkit/virtual_hid_device_service/client.hpp:12:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram.hpp:9:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram/client.hpp:9:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram/impl/client_impl.hpp:9:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram/impl/asio_helper.hpp:11:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/asio.hpp:19:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/asio/associated_executor.hpp:20:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/executor.hpp:42:18: error:
+     warning: 'result_of<asio::execution::invocable_archetype &()>' is deprecated [-Wdeprecated-declarations]
+            typename result_of<typename decay<F>::type&()>::type
+                     ^
+   |
+42 |         typename result_of<typename decay<F>::type&()>::type
+   |                  ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/executor.hpp:61:3: error:
+     note: in instantiation of template class 'asio::execution::detail::is_executor_of_impl_base<asio::io_context::basic_executor_type<std::allocator<void>, 0>, asio::execution::invocable_archetype>' requested here
+      conditional<
+      ^
+   |
+61 |   conditional<
+   |   ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/executor.hpp:113:3: error:
+     note: in instantiation of template class 'asio::execution::detail::is_executor_of_impl<asio::io_context::basic_executor_type<std::allocator<void>, 0>, asio::execution::invocable_archetype>' requested here
+      detail::is_executor_of_impl<T, invocable_archetype>
+      ^
+    |
+113 |   detail::is_executor_of_impl<T, invocable_archetype>
+    |   ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/any_executor.hpp:477:5: error:
+     note: in instantiation of template class 'asio::execution::is_executor<asio::io_context::basic_executor_type<std::allocator<void>, 0>>' requested here
+        is_executor<T>::value,
+        ^
+    |
+477 |     is_executor<T>::value,
+    |     ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/any_executor.hpp:1353:12: error:
+     note: in instantiation of template class 'asio::execution::detail::is_valid_target_executor<asio::io_context::basic_executor_type<std::allocator<void>, 0>, void (asio::execution::context_as_t<asio::execution_context &>, asio::execution::detail::blocking::never_t<0>, asio::execution::prefer_only<asio::execution::detail::blocking::possibly_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::tracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::untracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::fork_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::continuation_t<0>>)>' requested here
+            >::type::value
+               ^
+     |
+1353 |         >::type::value
+     |            ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/detail/io_object_impl.hpp:60:7: error:
+     note: while substituting deduced template arguments into function template 'any_executor' [with Executor = asio::io_context::basic_executor_type<std::allocator<void>, 0>]
+          executor_(context.get_executor())
+          ^
+   |
+60 |       executor_(context.get_executor())
+   |       ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/basic_waitable_timer.hpp:236:7: error:
+     note: in instantiation of function template specialization 'asio::detail::io_object_impl<asio::detail::deadline_timer_service<asio::detail::chrono_time_traits<std::chrono::steady_clock, asio::wait_traits<std::chrono::steady_clock>>>, asio::execution::any_executor<asio::execution::context_as_t<asio::execution_context &>, asio::execution::detail::blocking::never_t<0>, asio::execution::prefer_only<asio::execution::detail::blocking::possibly_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::tracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::untracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::fork_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::continuation_t<0>>>>::io_object_impl<asio::io_context>' requested here
+        : impl_(context)
+          ^
+    |
+236 |     : impl_(context)
+    |       ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/pqrs-org__cpp-local_datagram/install/include/pqrs/local_datagram/impl/base_impl.hpp:46:86: error:
+     note: in instantiation of function template specialization 'asio::basic_waitable_timer<std::chrono::steady_clock>::basic_waitable_timer<asio::io_context>' requested here
+                                                                                         send_invoker_(io_service_, asio_helper::time_point::pos_infin()),
+                                                                                         ^
+   |
+46 |                                                                                      send_invoker_(io_service_, asio_helper::time_point::pos_infin()),
+   |                                                                                      ^
+
+/Users/rocky/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/type_traits:4009:34: error:
+     note: 'result_of<asio::execution::invocable_archetype &()>' has been explicitly marked deprecated here
+     |
+4009 | template <class _Callable> class _LIBCPP_DEPRECATED_IN_CXX17 result_of;
+     |                                  ^
+template <class _Callable> class _LIBCPP_DEPRECATED_IN_CXX17 result_of;
+                                 ^
+
+/Users/rocky/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__config:1066:39: error:
+     note: expanded from macro '_LIBCPP_DEPRECATED_IN_CXX17'
+     |
+1066 | #  define _LIBCPP_DEPRECATED_IN_CXX17 _LIBCPP_DEPRECATED
+     |                                       ^
+#  define _LIBCPP_DEPRECATED_IN_CXX17 _LIBCPP_DEPRECATED
+                                      ^
+
+/Users/rocky/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__config:1043:48: error:
+     note: expanded from macro '_LIBCPP_DEPRECATED'
+     |
+1043 | #    define _LIBCPP_DEPRECATED __attribute__ ((deprecated))
+     |                                                ^
+#    define _LIBCPP_DEPRECATED __attribute__ ((deprecated))
+                                               ^
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/dext.cpp:4:0: error: 
+
+/Users/rocky/dev/fork/kmonad/In file included from /Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/include/pqrs/karabiner/driverkit/virtual_hid_device_service.hpp:7:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from /Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/include/pqrs/karabiner/driverkit/virtual_hid_device_service/client.hpp:12:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram.hpp:9:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram/client.hpp:9:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram/impl/client_impl.hpp:9:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram/impl/asio_helper.hpp:11:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/asio.hpp:19:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/asio/associated_executor.hpp:20:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/executor.hpp:42:18: error:
+     warning: 'result_of<asio::execution::detail::as_invocable<asio::execution::detail::void_receiver, asio::io_context::basic_executor_type<std::allocator<void>, 4>> &()>' is deprecated [-Wdeprecated-declarations]
+            typename result_of<typename decay<F>::type&()>::type
+                     ^
+   |
+42 |         typename result_of<typename decay<F>::type&()>::type
+   |                  ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/executor.hpp:61:3: error:
+     note: in instantiation of template class 'asio::execution::detail::is_executor_of_impl_base<asio::io_context::basic_executor_type<std::allocator<void>, 4>, asio::execution::detail::as_invocable<asio::execution::detail::void_receiver, asio::io_context::basic_executor_type<std::allocator<void>, 4>>>' requested here
+      conditional<
+      ^
+   |
+61 |   conditional<
+   |   ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/sender.hpp:114:20: error:
+     note: in instantiation of template class 'asio::execution::detail::is_executor_of_impl<asio::io_context::basic_executor_type<std::allocator<void>, 4>, asio::execution::detail::as_invocable<asio::execution::detail::void_receiver, asio::io_context::basic_executor_type<std::allocator<void>, 4>>>' requested here
+            && detail::is_executor_of_impl<S,
+                       ^
+    |
+114 |         && detail::is_executor_of_impl<S,
+    |                    ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/sender.hpp:148:5: error:
+     note: during template argument deduction for class template partial specialization 'sender_traits_base<S, typename enable_if<!has_sender_types<S>::value && detail::is_executor_of_impl<S, as_invocable<void_receiver, S>>::value>::type>' [with S = asio::io_context::basic_executor_type<std::allocator<void>, 4>]
+      : detail::sender_traits_base<S>
+        ^
+    |
+148 |   : detail::sender_traits_base<S>
+    |     ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/sender.hpp:148:5: error:
+     note: in instantiation of template class 'asio::execution::detail::sender_traits_base<asio::io_context::basic_executor_type<std::allocator<void>, 4>>' requested here
+    |
+148 |   : detail::sender_traits_base<S>
+    |     ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/sender.hpp:164:35: error:
+     note: in instantiation of template class 'asio::execution::sender_traits<asio::io_context::basic_executor_type<std::allocator<void>, 4>>' requested here
+            typename asio::execution::sender_traits<
+                                      ^
+    |
+164 |         typename asio::execution::sender_traits<
+    |                                   ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/sender.hpp:188:13: error:
+     note: (skipping 12 contexts in backtrace; use -ftemplate-backtrace-limit=0 to see all)
+        detail::has_sender_traits<typename remove_cvref<T>::type>::value,
+                ^
+    |
+188 |     detail::has_sender_traits<typename remove_cvref<T>::type>::value,
+    |             ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/any_executor.hpp:1588:37: error:
+     note: in instantiation of function template specialization 'asio::execution::detail::any_executor_base::prefer_fn<asio::execution::any_executor<asio::execution::context_as_t<asio::execution_context &>, asio::execution::detail::blocking::never_t<0>, asio::execution::prefer_only<asio::execution::detail::blocking::possibly_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::tracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::untracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::fork_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::continuation_t<0>>>, asio::io_context::basic_executor_type<std::allocator<void>, 0>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::tracked_t<0>>>' requested here
+            &detail::any_executor_base::prefer_fn<
+                                        ^
+     |
+1588 |         &detail::any_executor_base::prefer_fn<
+     |                                     ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/any_executor.hpp:1357:17: error:
+     note: in instantiation of function template specialization 'asio::execution::any_executor<asio::execution::context_as_t<asio::execution_context &>, asio::execution::detail::blocking::never_t<0>, asio::execution::prefer_only<asio::execution::detail::blocking::possibly_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::tracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::untracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::fork_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::continuation_t<0>>>::prop_fns_table<asio::io_context::basic_executor_type<std::allocator<void>, 0>>' requested here
+          prop_fns_(prop_fns_table<Executor>())
+                    ^
+     |
+1357 |       prop_fns_(prop_fns_table<Executor>())
+     |                 ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/detail/io_object_impl.hpp:60:7: error:
+     note: in instantiation of function template specialization 'asio::execution::any_executor<asio::execution::context_as_t<asio::execution_context &>, asio::execution::detail::blocking::never_t<0>, asio::execution::prefer_only<asio::execution::detail::blocking::possibly_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::tracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::untracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::fork_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::continuation_t<0>>>::any_executor<asio::io_context::basic_executor_type<std::allocator<void>, 0>>' requested here
+          executor_(context.get_executor())
+          ^
+   |
+60 |       executor_(context.get_executor())
+   |       ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/basic_waitable_timer.hpp:236:7: error:
+     note: in instantiation of function template specialization 'asio::detail::io_object_impl<asio::detail::deadline_timer_service<asio::detail::chrono_time_traits<std::chrono::steady_clock, asio::wait_traits<std::chrono::steady_clock>>>, asio::execution::any_executor<asio::execution::context_as_t<asio::execution_context &>, asio::execution::detail::blocking::never_t<0>, asio::execution::prefer_only<asio::execution::detail::blocking::possibly_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::tracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::untracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::fork_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::continuation_t<0>>>>::io_object_impl<asio::io_context>' requested here
+        : impl_(context)
+          ^
+    |
+236 |     : impl_(context)
+    |       ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/pqrs-org__cpp-local_datagram/install/include/pqrs/local_datagram/impl/base_impl.hpp:46:86: error:
+     note: in instantiation of function template specialization 'asio::basic_waitable_timer<std::chrono::steady_clock>::basic_waitable_timer<asio::io_context>' requested here
+                                                                                         send_invoker_(io_service_, asio_helper::time_point::pos_infin()),
+                                                                                         ^
+   |
+46 |                                                                                      send_invoker_(io_service_, asio_helper::time_point::pos_infin()),
+   |                                                                                      ^
+
+/Users/rocky/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/type_traits:4009:34: error:
+     note: 'result_of<asio::execution::detail::as_invocable<asio::execution::detail::void_receiver, asio::io_context::basic_executor_type<std::allocator<void>, 4>> &()>' has been explicitly marked deprecated here
+     |
+4009 | template <class _Callable> class _LIBCPP_DEPRECATED_IN_CXX17 result_of;
+     |                                  ^
+template <class _Callable> class _LIBCPP_DEPRECATED_IN_CXX17 result_of;
+                                 ^
+
+/Users/rocky/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__config:1066:39: error:
+     note: expanded from macro '_LIBCPP_DEPRECATED_IN_CXX17'
+     |
+1066 | #  define _LIBCPP_DEPRECATED_IN_CXX17 _LIBCPP_DEPRECATED
+     |                                       ^
+#  define _LIBCPP_DEPRECATED_IN_CXX17 _LIBCPP_DEPRECATED
+                                      ^
+
+/Users/rocky/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__config:1043:48: error:
+     note: expanded from macro '_LIBCPP_DEPRECATED'
+     |
+1043 | #    define _LIBCPP_DEPRECATED __attribute__ ((deprecated))
+     |                                                ^
+#    define _LIBCPP_DEPRECATED __attribute__ ((deprecated))
+                                               ^
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/dext.cpp:4:0: error: 
+
+/Users/rocky/dev/fork/kmonad/In file included from /Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/include/pqrs/karabiner/driverkit/virtual_hid_device_service.hpp:7:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from /Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/include/pqrs/karabiner/driverkit/virtual_hid_device_service/client.hpp:12:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram.hpp:9:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram/client.hpp:9:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram/impl/client_impl.hpp:9:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram/impl/asio_helper.hpp:11:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/asio.hpp:19:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/asio/associated_executor.hpp:20:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/executor.hpp:42:18: error:
+     warning: 'result_of<asio::execution::invocable_archetype &()>' is deprecated [-Wdeprecated-declarations]
+            typename result_of<typename decay<F>::type&()>::type
+                     ^
+   |
+42 |         typename result_of<typename decay<F>::type&()>::type
+   |                  ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/executor.hpp:61:3: error:
+     note: in instantiation of template class 'asio::execution::detail::is_executor_of_impl_base<asio::io_context::basic_executor_type<std::allocator<void>, 4>, asio::execution::invocable_archetype>' requested here
+      conditional<
+      ^
+   |
+61 |   conditional<
+   |   ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/executor.hpp:113:3: error:
+     note: in instantiation of template class 'asio::execution::detail::is_executor_of_impl<asio::io_context::basic_executor_type<std::allocator<void>, 4>, asio::execution::invocable_archetype>' requested here
+      detail::is_executor_of_impl<T, invocable_archetype>
+      ^
+    |
+113 |   detail::is_executor_of_impl<T, invocable_archetype>
+    |   ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/any_executor.hpp:477:5: error:
+     note: in instantiation of template class 'asio::execution::is_executor<asio::io_context::basic_executor_type<std::allocator<void>, 4>>' requested here
+        is_executor<T>::value,
+        ^
+    |
+477 |     is_executor<T>::value,
+    |     ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/any_executor.hpp:1353:12: error:
+     note: in instantiation of template class 'asio::execution::detail::is_valid_target_executor<asio::io_context::basic_executor_type<std::allocator<void>, 4>, void (asio::execution::context_as_t<asio::execution_context &>, asio::execution::detail::blocking::never_t<0>, asio::execution::prefer_only<asio::execution::detail::blocking::possibly_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::tracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::untracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::fork_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::continuation_t<0>>)>' requested here
+            >::type::value
+               ^
+     |
+1353 |         >::type::value
+     |            ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/any_executor.hpp:1077:12: error:
+     note: while substituting deduced template arguments into function template 'any_executor' [with Executor = asio::io_context::basic_executor_type<std::allocator<void>, 4>]
+        return asio::prefer(*static_cast<const Ex*>(ex),
+               ^
+     |
+1077 |     return asio::prefer(*static_cast<const Ex*>(ex),
+     |            ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/any_executor.hpp:1090:12: error:
+     note: (skipping 1 context in backtrace; use -ftemplate-backtrace-limit=0 to see all)
+        return prefer_fn_impl<Poly, Ex, Prop>(ex, prop, 0);
+               ^
+     |
+1090 |     return prefer_fn_impl<Poly, Ex, Prop>(ex, prop, 0);
+     |            ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/any_executor.hpp:1588:37: error:
+     note: in instantiation of function template specialization 'asio::execution::detail::any_executor_base::prefer_fn<asio::execution::any_executor<asio::execution::context_as_t<asio::execution_context &>, asio::execution::detail::blocking::never_t<0>, asio::execution::prefer_only<asio::execution::detail::blocking::possibly_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::tracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::untracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::fork_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::continuation_t<0>>>, asio::io_context::basic_executor_type<std::allocator<void>, 0>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::tracked_t<0>>>' requested here
+            &detail::any_executor_base::prefer_fn<
+                                        ^
+     |
+1588 |         &detail::any_executor_base::prefer_fn<
+     |                                     ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/any_executor.hpp:1357:17: error:
+     note: in instantiation of function template specialization 'asio::execution::any_executor<asio::execution::context_as_t<asio::execution_context &>, asio::execution::detail::blocking::never_t<0>, asio::execution::prefer_only<asio::execution::detail::blocking::possibly_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::tracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::untracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::fork_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::continuation_t<0>>>::prop_fns_table<asio::io_context::basic_executor_type<std::allocator<void>, 0>>' requested here
+          prop_fns_(prop_fns_table<Executor>())
+                    ^
+     |
+1357 |       prop_fns_(prop_fns_table<Executor>())
+     |                 ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/detail/io_object_impl.hpp:60:7: error:
+     note: in instantiation of function template specialization 'asio::execution::any_executor<asio::execution::context_as_t<asio::execution_context &>, asio::execution::detail::blocking::never_t<0>, asio::execution::prefer_only<asio::execution::detail::blocking::possibly_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::tracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::untracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::fork_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::continuation_t<0>>>::any_executor<asio::io_context::basic_executor_type<std::allocator<void>, 0>>' requested here
+          executor_(context.get_executor())
+          ^
+   |
+60 |       executor_(context.get_executor())
+   |       ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/basic_waitable_timer.hpp:236:7: error:
+     note: in instantiation of function template specialization 'asio::detail::io_object_impl<asio::detail::deadline_timer_service<asio::detail::chrono_time_traits<std::chrono::steady_clock, asio::wait_traits<std::chrono::steady_clock>>>, asio::execution::any_executor<asio::execution::context_as_t<asio::execution_context &>, asio::execution::detail::blocking::never_t<0>, asio::execution::prefer_only<asio::execution::detail::blocking::possibly_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::tracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::untracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::fork_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::continuation_t<0>>>>::io_object_impl<asio::io_context>' requested here
+        : impl_(context)
+          ^
+    |
+236 |     : impl_(context)
+    |       ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/pqrs-org__cpp-local_datagram/install/include/pqrs/local_datagram/impl/base_impl.hpp:46:86: error:
+     note: in instantiation of function template specialization 'asio::basic_waitable_timer<std::chrono::steady_clock>::basic_waitable_timer<asio::io_context>' requested here
+                                                                                         send_invoker_(io_service_, asio_helper::time_point::pos_infin()),
+                                                                                         ^
+   |
+46 |                                                                                      send_invoker_(io_service_, asio_helper::time_point::pos_infin()),
+   |                                                                                      ^
+
+/Users/rocky/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/type_traits:4009:34: error:
+     note: 'result_of<asio::execution::invocable_archetype &()>' has been explicitly marked deprecated here
+     |
+4009 | template <class _Callable> class _LIBCPP_DEPRECATED_IN_CXX17 result_of;
+     |                                  ^
+template <class _Callable> class _LIBCPP_DEPRECATED_IN_CXX17 result_of;
+                                 ^
+
+/Users/rocky/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__config:1066:39: error:
+     note: expanded from macro '_LIBCPP_DEPRECATED_IN_CXX17'
+     |
+1066 | #  define _LIBCPP_DEPRECATED_IN_CXX17 _LIBCPP_DEPRECATED
+     |                                       ^
+#  define _LIBCPP_DEPRECATED_IN_CXX17 _LIBCPP_DEPRECATED
+                                      ^
+
+/Users/rocky/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__config:1043:48: error:
+     note: expanded from macro '_LIBCPP_DEPRECATED'
+     |
+1043 | #    define _LIBCPP_DEPRECATED __attribute__ ((deprecated))
+     |                                                ^
+#    define _LIBCPP_DEPRECATED __attribute__ ((deprecated))
+                                               ^
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/dext.cpp:4:0: error: 
+
+/Users/rocky/dev/fork/kmonad/In file included from /Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/include/pqrs/karabiner/driverkit/virtual_hid_device_service.hpp:7:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from /Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/include/pqrs/karabiner/driverkit/virtual_hid_device_service/client.hpp:12:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram.hpp:9:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram/client.hpp:9:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram/impl/client_impl.hpp:9:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram/impl/asio_helper.hpp:11:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/asio.hpp:19:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/asio/associated_executor.hpp:20:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/executor.hpp:42:18: error:
+     warning: 'result_of<asio::execution::detail::as_invocable<asio::execution::detail::void_receiver, asio::execution::any_executor<asio::execution::context_as_t<asio::execution_context &>, asio::execution::detail::blocking::never_t<0>, asio::execution::prefer_only<asio::execution::detail::blocking::possibly_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::tracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::untracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::fork_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::continuation_t<0>>>> &()>' is deprecated [-Wdeprecated-declarations]
+            typename result_of<typename decay<F>::type&()>::type
+                     ^
+   |
+42 |         typename result_of<typename decay<F>::type&()>::type
+   |                  ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/executor.hpp:61:3: error:
+     note: in instantiation of template class 'asio::execution::detail::is_executor_of_impl_base<asio::execution::any_executor<asio::execution::context_as_t<asio::execution_context &>, asio::execution::detail::blocking::never_t<0>, asio::execution::prefer_only<asio::execution::detail::blocking::possibly_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::tracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::untracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::fork_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::continuation_t<0>>>, asio::execution::detail::as_invocable<asio::execution::detail::void_receiver, asio::execution::any_executor<asio::execution::context_as_t<asio::execution_context &>, asio::execution::detail::blocking::never_t<0>, asio::execution::prefer_only<asio::execution::detail::blocking::possibly_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::tracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::untracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::fork_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::continuation_t<0>>>>>' requested here
+      conditional<
+      ^
+   |
+61 |   conditional<
+   |   ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/sender.hpp:114:20: error:
+     note: in instantiation of template class 'asio::execution::detail::is_executor_of_impl<asio::execution::any_executor<asio::execution::context_as_t<asio::execution_context &>, asio::execution::detail::blocking::never_t<0>, asio::execution::prefer_only<asio::execution::detail::blocking::possibly_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::tracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::untracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::fork_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::continuation_t<0>>>, asio::execution::detail::as_invocable<asio::execution::detail::void_receiver, asio::execution::any_executor<asio::execution::context_as_t<asio::execution_context &>, asio::execution::detail::blocking::never_t<0>, asio::execution::prefer_only<asio::execution::detail::blocking::possibly_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::tracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::untracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::fork_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::continuation_t<0>>>>>' requested here
+            && detail::is_executor_of_impl<S,
+                       ^
+    |
+114 |         && detail::is_executor_of_impl<S,
+    |                    ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/sender.hpp:148:5: error:
+     note: during template argument deduction for class template partial specialization 'sender_traits_base<S, typename enable_if<!has_sender_types<S>::value && detail::is_executor_of_impl<S, as_invocable<void_receiver, S>>::value>::type>' [with S = asio::execution::any_executor<asio::execution::context_as_t<asio::execution_context &>, asio::execution::detail::blocking::never_t<0>, asio::execution::prefer_only<asio::execution::detail::blocking::possibly_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::tracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::untracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::fork_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::continuation_t<0>>>]
+      : detail::sender_traits_base<S>
+        ^
+    |
+148 |   : detail::sender_traits_base<S>
+    |     ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/sender.hpp:148:5: error:
+     note: in instantiation of template class 'asio::execution::detail::sender_traits_base<asio::execution::any_executor<asio::execution::context_as_t<asio::execution_context &>, asio::execution::detail::blocking::never_t<0>, asio::execution::prefer_only<asio::execution::detail::blocking::possibly_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::tracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::untracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::fork_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::continuation_t<0>>>>' requested here
+    |
+148 |   : detail::sender_traits_base<S>
+    |     ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/sender.hpp:164:35: error:
+     note: in instantiation of template class 'asio::execution::sender_traits<asio::execution::any_executor<asio::execution::context_as_t<asio::execution_context &>, asio::execution::detail::blocking::never_t<0>, asio::execution::prefer_only<asio::execution::detail::blocking::possibly_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::tracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::untracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::fork_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::continuation_t<0>>>>' requested here
+            typename asio::execution::sender_traits<
+                                      ^
+    |
+164 |         typename asio::execution::sender_traits<
+    |                                   ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/sender.hpp:188:13: error:
+     note: (skipping 12 contexts in backtrace; use -ftemplate-backtrace-limit=0 to see all)
+        detail::has_sender_traits<typename remove_cvref<T>::type>::value,
+                ^
+    |
+188 |     detail::has_sender_traits<typename remove_cvref<T>::type>::value,
+    |             ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/detail/reactive_socket_service.hpp:364:14: error:
+     note: in instantiation of template class 'asio::detail::reactive_socket_recvfrom_op<asio::mutable_buffers_1, asio::local::basic_endpoint<asio::local::datagram_protocol>, (lambda at c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram/impl/base_impl.hpp:168:33), asio::execution::any_executor<asio::execution::context_as_t<asio::execution_context &>, asio::execution::detail::blocking::never_t<0>, asio::execution::prefer_only<asio::execution::detail::blocking::possibly_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::tracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::untracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::fork_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::continuation_t<0>>>>' requested here
+        typename op::ptr p = { asio::detail::addressof(handler),
+                 ^
+    |
+364 |     typename op::ptr p = { asio::detail::addressof(handler),
+    |              ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/basic_datagram_socket.hpp:1201:34: error:
+     note: in instantiation of function template specialization 'asio::detail::reactive_socket_service<asio::local::datagram_protocol>::async_receive_from<asio::mutable_buffers_1, (lambda at c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram/impl/base_impl.hpp:168:33), asio::execution::any_executor<asio::execution::context_as_t<asio::execution_context &>, asio::execution::detail::blocking::never_t<0>, asio::execution::prefer_only<asio::execution::detail::blocking::possibly_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::tracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::untracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::fork_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::continuation_t<0>>>>' requested here
+          self_->impl_.get_service().async_receive_from(
+                                     ^
+     |
+1201 |       self_->impl_.get_service().async_receive_from(
+     |                                  ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/async_result.hpp:151:5: error:
+     note: in instantiation of function template specialization 'asio::basic_datagram_socket<asio::local::datagram_protocol>::initiate_async_receive_from::operator()<(lambda at c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram/impl/base_impl.hpp:168:33), asio::mutable_buffers_1>' requested here
+        ASIO_MOVE_CAST(Initiation)(initiation)(
+        ^
+    |
+151 |     ASIO_MOVE_CAST(Initiation)(initiation)(
+    |     ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/detail/config.hpp:148:31: error:
+     note: expanded from macro 'ASIO_MOVE_CAST'
+    |
+148 | # define ASIO_MOVE_CAST(type) static_cast<type&&>
+    |                               ^
+# define ASIO_MOVE_CAST(type) static_cast<type&&>
+                              ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/async_result.hpp:364:17: error:
+     note: in instantiation of function template specialization 'asio::async_result<(lambda at c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram/impl/base_impl.hpp:168:33), void (std::error_code, unsigned long)>::initiate<asio::basic_datagram_socket<asio::local::datagram_protocol>::initiate_async_receive_from, (lambda at c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram/impl/base_impl.hpp:168:33), const asio::mutable_buffers_1 &, asio::local::basic_endpoint<asio::local::datagram_protocol> *, int>' requested here
+        Signature>::initiate(ASIO_MOVE_CAST(Initiation)(initiation),
+                    ^
+    |
+364 |     Signature>::initiate(ASIO_MOVE_CAST(Initiation)(initiation),
+    |                 ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/basic_datagram_socket.hpp:1016:12: error:
+     note: in instantiation of function template specialization 'asio::async_initiate<(lambda at c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram/impl/base_impl.hpp:168:33), void (std::error_code, unsigned long), asio::basic_datagram_socket<asio::local::datagram_protocol>::initiate_async_receive_from, const asio::mutable_buffers_1 &, asio::local::basic_endpoint<asio::local::datagram_protocol> *, int>' requested here
+        return async_initiate<ReadHandler,
+               ^
+     |
+1016 |     return async_initiate<ReadHandler,
+     |            ^
+
+/Users/rocky/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/type_traits:4009:34: error:
+     note: 'result_of<asio::execution::detail::as_invocable<asio::execution::detail::void_receiver, asio::execution::any_executor<asio::execution::context_as_t<asio::execution_context &>, asio::execution::detail::blocking::never_t<0>, asio::execution::prefer_only<asio::execution::detail::blocking::possibly_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::tracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::untracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::fork_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::continuation_t<0>>>> &()>' has been explicitly marked deprecated here
+     |
+4009 | template <class _Callable> class _LIBCPP_DEPRECATED_IN_CXX17 result_of;
+     |                                  ^
+template <class _Callable> class _LIBCPP_DEPRECATED_IN_CXX17 result_of;
+                                 ^
+
+/Users/rocky/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__config:1066:39: error:
+     note: expanded from macro '_LIBCPP_DEPRECATED_IN_CXX17'
+     |
+1066 | #  define _LIBCPP_DEPRECATED_IN_CXX17 _LIBCPP_DEPRECATED
+     |                                       ^
+#  define _LIBCPP_DEPRECATED_IN_CXX17 _LIBCPP_DEPRECATED
+                                      ^
+
+/Users/rocky/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__config:1043:48: error:
+     note: expanded from macro '_LIBCPP_DEPRECATED'
+     |
+1043 | #    define _LIBCPP_DEPRECATED __attribute__ ((deprecated))
+     |                                                ^
+#    define _LIBCPP_DEPRECATED __attribute__ ((deprecated))
+                                               ^
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/dext.cpp:4:0: error: 
+
+/Users/rocky/dev/fork/kmonad/In file included from /Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/include/pqrs/karabiner/driverkit/virtual_hid_device_service.hpp:7:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from /Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/include/pqrs/karabiner/driverkit/virtual_hid_device_service/client.hpp:12:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram.hpp:9:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram/client.hpp:9:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram/impl/client_impl.hpp:9:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram/impl/asio_helper.hpp:11:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/asio.hpp:19:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/In file included from c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/asio/associated_executor.hpp:20:0: error:
+    
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/executor.hpp:42:18: error:
+     warning: 'result_of<asio::execution::invocable_archetype &()>' is deprecated [-Wdeprecated-declarations]
+            typename result_of<typename decay<F>::type&()>::type
+                     ^
+   |
+42 |         typename result_of<typename decay<F>::type&()>::type
+   |                  ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/executor.hpp:61:3: error:
+     note: in instantiation of template class 'asio::execution::detail::is_executor_of_impl_base<asio::execution::any_executor<asio::execution::context_as_t<asio::execution_context &>, asio::execution::detail::blocking::never_t<0>, asio::execution::prefer_only<asio::execution::detail::blocking::possibly_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::tracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::untracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::fork_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::continuation_t<0>>>, asio::execution::invocable_archetype>' requested here
+      conditional<
+      ^
+   |
+61 |   conditional<
+   |   ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/execution/executor.hpp:113:3: error:
+     note: in instantiation of template class 'asio::execution::detail::is_executor_of_impl<asio::execution::any_executor<asio::execution::context_as_t<asio::execution_context &>, asio::execution::detail::blocking::never_t<0>, asio::execution::prefer_only<asio::execution::detail::blocking::possibly_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::tracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::untracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::fork_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::continuation_t<0>>>, asio::execution::invocable_archetype>' requested here
+      detail::is_executor_of_impl<T, invocable_archetype>
+      ^
+    |
+113 |   detail::is_executor_of_impl<T, invocable_archetype>
+    |   ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/detail/handler_work.hpp:113:19: error:
+     note: in instantiation of template class 'asio::execution::is_executor<asio::execution::any_executor<asio::execution::context_as_t<asio::execution_context &>, asio::execution::detail::blocking::never_t<0>, asio::execution::prefer_only<asio::execution::detail::blocking::possibly_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::tracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::untracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::fork_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::continuation_t<0>>>>' requested here
+          !execution::is_executor<Executor>::value
+                      ^
+    |
+113 |       !execution::is_executor<Executor>::value
+    |                   ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/detail/handler_work.hpp:406:16: error:
+     note: during template argument deduction for class template partial specialization 'handler_work_base<Executor, CandidateExecutor, IoContext, PolymorphicExecutor, typename enable_if<!execution::is_executor<Executor>::value && (!is_same<Executor, PolymorphicExecutor>::value || !is_same<CandidateExecutor, void>::value)>::type>' [with Executor = asio::execution::any_executor<asio::execution::context_as_t<asio::execution_context &>, asio::execution::detail::blocking::never_t<0>, asio::execution::prefer_only<asio::execution::detail::blocking::possibly_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::tracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::untracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::fork_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::continuation_t<0>>>, CandidateExecutor = void, IoContext = asio::io_context, PolymorphicExecutor = asio::executor]
+        >::type> : handler_work_base<IoExecutor>
+                   ^
+    |
+406 |     >::type> : handler_work_base<IoExecutor>
+    |                ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/detail/handler_work.hpp:406:16: error:
+     note: in instantiation of template class 'asio::detail::handler_work_base<asio::execution::any_executor<asio::execution::context_as_t<asio::execution_context &>, asio::execution::detail::blocking::never_t<0>, asio::execution::prefer_only<asio::execution::detail::blocking::possibly_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::tracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::untracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::fork_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::continuation_t<0>>>>' requested here
+    |
+406 |     >::type> : handler_work_base<IoExecutor>
+    |                ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/detail/reactive_socket_recvfrom_op.hpp:156:37: error:
+     note: (skipping 1 context in backtrace; use -ftemplate-backtrace-limit=0 to see all)
+      handler_work<Handler, IoExecutor> work_;
+                                        ^
+    |
+156 |   handler_work<Handler, IoExecutor> work_;
+    |                                     ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/detail/reactive_socket_service.hpp:364:14: error:
+     note: in instantiation of template class 'asio::detail::reactive_socket_recvfrom_op<asio::mutable_buffers_1, asio::local::basic_endpoint<asio::local::datagram_protocol>, (lambda at c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram/impl/base_impl.hpp:168:33), asio::execution::any_executor<asio::execution::context_as_t<asio::execution_context &>, asio::execution::detail::blocking::never_t<0>, asio::execution::prefer_only<asio::execution::detail::blocking::possibly_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::tracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::untracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::fork_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::continuation_t<0>>>>' requested here
+        typename op::ptr p = { asio::detail::addressof(handler),
+                 ^
+    |
+364 |     typename op::ptr p = { asio::detail::addressof(handler),
+    |              ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/basic_datagram_socket.hpp:1201:34: error:
+     note: in instantiation of function template specialization 'asio::detail::reactive_socket_service<asio::local::datagram_protocol>::async_receive_from<asio::mutable_buffers_1, (lambda at c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram/impl/base_impl.hpp:168:33), asio::execution::any_executor<asio::execution::context_as_t<asio::execution_context &>, asio::execution::detail::blocking::never_t<0>, asio::execution::prefer_only<asio::execution::detail::blocking::possibly_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::tracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::outstanding_work::untracked_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::fork_t<0>>, asio::execution::prefer_only<asio::execution::detail::relationship::continuation_t<0>>>>' requested here
+          self_->impl_.get_service().async_receive_from(
+                                     ^
+     |
+1201 |       self_->impl_.get_service().async_receive_from(
+     |                                  ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/async_result.hpp:151:5: error:
+     note: in instantiation of function template specialization 'asio::basic_datagram_socket<asio::local::datagram_protocol>::initiate_async_receive_from::operator()<(lambda at c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram/impl/base_impl.hpp:168:33), asio::mutable_buffers_1>' requested here
+        ASIO_MOVE_CAST(Initiation)(initiation)(
+        ^
+    |
+151 |     ASIO_MOVE_CAST(Initiation)(initiation)(
+    |     ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/detail/config.hpp:148:31: error:
+     note: expanded from macro 'ASIO_MOVE_CAST'
+    |
+148 | # define ASIO_MOVE_CAST(type) static_cast<type&&>
+    |                               ^
+# define ASIO_MOVE_CAST(type) static_cast<type&&>
+                              ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/async_result.hpp:364:17: error:
+     note: in instantiation of function template specialization 'asio::async_result<(lambda at c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram/impl/base_impl.hpp:168:33), void (std::error_code, unsigned long)>::initiate<asio::basic_datagram_socket<asio::local::datagram_protocol>::initiate_async_receive_from, (lambda at c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram/impl/base_impl.hpp:168:33), const asio::mutable_buffers_1 &, asio::local::basic_endpoint<asio::local::datagram_protocol> *, int>' requested here
+        Signature>::initiate(ASIO_MOVE_CAST(Initiation)(initiation),
+                    ^
+    |
+364 |     Signature>::initiate(ASIO_MOVE_CAST(Initiation)(initiation),
+    |                 ^
+
+/Users/rocky/dev/fork/kmonad/c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/cget/pkg/chriskohlhoff__asio/install/include/asio/basic_datagram_socket.hpp:1016:12: error:
+     note: in instantiation of function template specialization 'asio::async_initiate<(lambda at c_src/mac/Karabiner-DriverKit-VirtualHIDDevice/src/Client/vendor/include/pqrs/local_datagram/impl/base_impl.hpp:168:33), void (std::error_code, unsigned long), asio::basic_datagram_socket<asio::local::datagram_protocol>::initiate_async_receive_from, const asio::mutable_buffers_1 &, asio::local::basic_endpoint<asio::local::datagram_protocol> *, int>' requested here
+        return async_initiate<ReadHandler,
+               ^
+     |
+1016 |     return async_initiate<ReadHandler,
+     |            ^
+
+/Users/rocky/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/type_traits:4009:34: error:
+     note: 'result_of<asio::execution::invocable_archetype &()>' has been explicitly marked deprecated here
+     |
+4009 | template <class _Callable> class _LIBCPP_DEPRECATED_IN_CXX17 result_of;
+     |                                  ^
+template <class _Callable> class _LIBCPP_DEPRECATED_IN_CXX17 result_of;
+                                 ^
+
+/Users/rocky/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__config:1066:39: error:
+     note: expanded from macro '_LIBCPP_DEPRECATED_IN_CXX17'
+     |
+1066 | #  define _LIBCPP_DEPRECATED_IN_CXX17 _LIBCPP_DEPRECATED
+     |                                       ^
+#  define _LIBCPP_DEPRECATED_IN_CXX17 _LIBCPP_DEPRECATED
+                                      ^
+
+/Users/rocky/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__config:1043:48: error:
+     note: expanded from macro '_LIBCPP_DEPRECATED'
+     |
+1043 | #    define _LIBCPP_DEPRECATED __attribute__ ((deprecated))
+     |                                                ^
+#    define _LIBCPP_DEPRECATED __attribute__ ((deprecated))
+                                               ^
+12 warnings and 2 errors generated.
+`gcc' failed in phase `C Compiler'. (Exit code: 1)
+
+--  While building package kmonad-0.4.1 (scroll up to its section to see the error) using:
+      /Users/rocky/.stack/setup-exe-cache/x86_64-osx/Cabal-simple_mPHDZzAJ_3.2.1.0_ghc-8.10.4 --builddir=.stack-work/dist/x86_64-osx/Cabal-3.2.1.0 build lib:kmonad exe:kmonad --ghc-options ""
+    Process exited with code: ExitFailure 1
